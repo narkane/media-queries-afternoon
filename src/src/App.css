@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+}
+
+button {
+  cursor: pointer;
+}
+
+.welcome {
+  width: 100vw;
+  height: 800px;
+  background: darkgray;
+  top: 10vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/header-bg.jpg");
+  /* height: 500px; */
+  /* top: 7vh; */
+}
+
+.App {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navContainer {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  background: #000;
+  color: white;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.logoContainer {
+  margin-left: 15vw;
+  align-self: center;
+}
+
+.logoContainer > h3 {
+  color: #ffdb4d;
+  font-family: "Kaushan Script", cursive;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.linkContainer {
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  margin-right: 15vw;
+}
+
+.linkContainer > p {
+  cursor: pointer;
+}
+
+.hamburgerBtn {
+  display: none;
+}
+
+.backgroundImg {
+  max-width: 100vw;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.tellMeMoreBtn {
+  width: 220px;
+  height: 70px;
+  background: #fed136;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.welcome > h2 {
+  font-size: 40px;
+  font-style: italic;
+  margin: 5px;
+}
+
+.welcome > h1 {
+  font-size: 70px;
+  font-weight: 800;
+  margin: 5px;
+}
+
+.serviceSection {
+  width: 100vw;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serviceSection > h2 {
+  margin: 10px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.serviceSection > p {
+  margin: 10px;
+}
+
+.services {
+  margin: 10px;
+  display: flex;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service > h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px;
+}
+
+.serviceIcon {
+  background: #fed136;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+@media (max-width: 990px) {
+  .navContainer {
+    height: 7vh;
+  }
+
+  .linkContainer {
+    display: none;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+    background: #fed136;
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    align-self: center;
+    margin-right: 40px;
+    padding: 5px;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .hamburgerBtn > span {
+    align-self: center;
+    font-size: 12px;
+  }
+
+  .hamburgerIcon {
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    color: white;
+  }
+
+  .hamburgerMenu {
+    z-index: 1;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    top: 7vh;
+    color: white;
+    animation: menuLower 0.5s;
+  }
+
+  .hamburgerLinks {
+    width: 80vw;
+    margin: 0px auto;
+    text-align: left;
+    cursor: pointer;
+    animation: fadeIn 1s;
+  }
+
+  .services {
+    flex-direction: column;
+  }
+}
+
+@keyframes menuLower {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
